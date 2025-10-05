@@ -49,5 +49,5 @@ class DbtCoreOperator(BaseOperator):
 
         self.log.info("dbt command executed successfully.")
 
-        for r in res.results:
+        for r in res.result:
             print(f"{r.node.name}: {r.status}")

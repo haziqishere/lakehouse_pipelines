@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fact_sale
+    columns:
+      - name: orderdate
+        data_tests:
+          - not_null
+  - name: dim_product
+    columns:
+      - name: productkey
+        data_tests:
+          - not_null
+          - unique
+  - name: dim_country
+    columns:
+      - name: countrykey
+        data_tests:
+          - not_null
+          - unique
