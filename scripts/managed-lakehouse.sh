@@ -22,6 +22,11 @@ start_services() {
     echo "Starting Airflow orchestration services..."
     docker compose --env-file .env -f docker/docker-compose-airflow.yaml up -d
     sleep 5
+
+    # Step 4: Start Metabase services (PostgreSQL + Metabase)
+    echo "Starting Metabase services..."
+    docker compose -f docker/docker-compose-metabase.yaml up -d
+    sleep 5
     
     echo "All services started successfully."
     echo ""
@@ -30,6 +35,7 @@ start_services() {
     echo "  - Trino Web UI: http://localhost:8080"
     echo "  - Airflow Web UI: http://localhost:8081 (airflow/airflow)"
     echo "  - Nessie API: http://localhost:19120"
+    echo "  - Metabase: http://localhost:3000"
     echo ""
 
     # Initialize Trino with required schemas
