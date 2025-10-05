@@ -1,12 +1,12 @@
 {{ config(materialized='table') }}
 
 SELECT
-    to_hex(md5(to_utf(CAST(p.product_key as VARCHAR)))) as productkey,
+    to_hex(md5(to_utf8(CAST(p.productkey as VARCHAR)))) as productkey,
     p.productname,
     p.productsku,
     p.productcolor,
     ps.subcategoryname,
-    pc.category_name
+    pc.categoryname
 
 FROM {{ ref("stg_products")}} p
 LEFT JOIN {{ ref("stg_product_subcategories")}} ps

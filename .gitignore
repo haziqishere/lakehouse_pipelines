@@ -215,9 +215,11 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Cursor
-.cursor/
 
 logs/
 .DS_Store
 config/airflow.cfg
+
+# Test rea
+.test_area
+test_area/*
