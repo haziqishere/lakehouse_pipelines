@@ -2,7 +2,7 @@
 
 SELECT
     s.orderdate AS order_date, 
-    s.ordernumber AS order_numner,
+    s.ordernumber AS order_number,
     to_hex(md5(to_utf8(CAST(s.productkey AS VARCHAR)))) as product_key,
     to_hex(md5(to_utf8(t.country))) as country_key,
     (s.orderquantity * p.productprice) as revenue,
