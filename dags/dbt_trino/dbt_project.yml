@@ -1,7 +1,20 @@
+# Project name
+name: 'my_dbt_trino'
+version: '1.0.0'
+
+# profile dbt uses for this project
+profile: 'dbt_trino'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+
 seeds:
   my_dbt_trino:
-    schema: staging
-
+    schema: landing
 models:
   my_dbt_trino:
     staging:
