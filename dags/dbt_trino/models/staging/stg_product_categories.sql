@@ -2,4 +2,4 @@
 
 SELECT *
 
-FROM {{ reg('product_categories')}}
+FROM {{ ref('product_categories')}}

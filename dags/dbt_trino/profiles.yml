@@ -7,6 +7,6 @@ dbt_trino:
       database: iceberg
       host: trino-coordinator
       port: 8080
-      schema: staging
+      schema: lakehouse
       threads: 1
   target: trino_output
