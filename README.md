@@ -72,22 +72,7 @@ CSV Files → Airflow → Landing (dbt seed) → Staging (dbt transformations) �
 3. **Modeling**: Dimensional star schema created with fact and dimension tables
 4. **Analytics**: Metabase queries curated layer via Trino for dashboards and reports
 
-### Tech Stack Details
-
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| Object Storage | MinIO | S3-compatible data lake storage |
-| Table Format | Apache Iceberg | ACID transactions, time travel, schema evolution |
-| Data Catalog | Nessie | Version control for data tables |
-| Query Engine | Trino (3 nodes) | Distributed SQL processing |
-| Transformations | dbt | SQL-based data modeling |
-| Orchestration | Apache Airflow 3.0.6 | Workflow scheduling and management |
-| Analytics | Metabase | Business intelligence and visualization |
-| File Format | Parquet | Columnar storage for optimized queries |
-| Containerization | Docker Compose | Running containerized application|
-
 ## Features
-
 ### Lakehouse Capabilities
 - **ACID Transactions**: Guaranteed data consistency across all operations
 - **Time Travel**: Query historical data states and audit changes
